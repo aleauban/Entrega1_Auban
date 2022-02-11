@@ -1,0 +1,14 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% block ContenidoQueCambia %}
+
+    <h1>Detalle del Profesional Médico</h1>
+
+    <p>Nombre: {{medico.nombre}}</p>
+    <p>Apellido: {{medico.apellido}}</p>
+    <p>Email: {{medico.email}}</p>
+    <p>Profesión: {{medico.profesion}}</p>
+        <a href="{% url 'Medico/List' %}">Regresar</a>
+    </p>
+
+{% endblock ContenidoQueCambia %}

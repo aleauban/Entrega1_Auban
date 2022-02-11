@@ -3,10 +3,11 @@
 {% block ContenidoQueCambia %}
 
     <form method="post">{% csrf_token %}
-        {{ form.as_p }}
+        ¿Estas seguro de eliminar el tuno {{ object.especialidad}} {{ object.fecha}}?
         <input type="submit" value="Enviar">
-        <p>
-            <a href="{% url 'Paciente/List' %}">Cancelar</a>
-        </p>
+    </form>
+    <p>
+        <a href="{% url 'Turno/List' %}">Cancelar</a>
+    </p>
 
 {% endblock ContenidoQueCambia %}

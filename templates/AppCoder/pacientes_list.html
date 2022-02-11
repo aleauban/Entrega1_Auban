@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "AppCoder/padre.html" %} 
+
+{% block ContenidoQueCambia %}
 
     <h1>Pacientes Registrados</h1>
 
@@ -14,7 +8,7 @@
         {% for paciente in object_list %}
         <li>
             <p>Nombre y Apellido: {{paciente.nombre}} {{paciente.apellido}}</p>
-        <li>
+            
             <p>
                 <a href="{% url 'Detail' paciente.id %}">Detalles</a>
                 <a href="{% url 'Edit' paciente.id %}">Editar</a>
@@ -27,5 +21,5 @@
     <p>
         <a href="{% url 'New' %}">Crear</a>
     </p>
-</body>
-</html>
+
+{% endblock ContenidoQueCambia %}

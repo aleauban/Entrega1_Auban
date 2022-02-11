@@ -1,0 +1,12 @@
+{% extends "AppCoder/padre.html" %} 
+
+{% block ContenidoQueCambia %}
+
+    <h1>Detalle del Turno</h1>
+
+    <p>Especialdad: {{turno.especialidad}}</p>
+    <p>Fecha: {{turno.fecha}}</p>
+        <a href="{% url 'Turno/List' %}">Regresar</a>
+    </p>
+
+{% endblock ContenidoQueCambia %}
