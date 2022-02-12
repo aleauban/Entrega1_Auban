@@ -2,12 +2,16 @@ from dataclasses import field
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.shortcuts import render
 
 # Create your views here.
 
 from .models import Paciente, Medico, Turno
 
 # Create your views here.
+
+def inicio (request):
+    return render (request, 'AppCoder/padre.html')
 
 class PacienteList(ListView):
     model = Paciente

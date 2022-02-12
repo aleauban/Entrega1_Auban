@@ -2,6 +2,7 @@ from django.urls import path
 from AppCoder.views import *
 
 urlpatterns = [
+    path('inicio/',inicio,name="AppCoderInicio"),
     path('paciente/list', PacienteList.as_view(), name='Paciente/List'),
     path('paciente/<int:pk>/', PacienteDetalle.as_view(), name='Paciente/Detail'),
     path('paciente/nuevo/', PacienteCreacion.as_view(), name='Paciente/New'),
