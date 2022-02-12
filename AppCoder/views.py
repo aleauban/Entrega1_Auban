@@ -4,6 +4,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.shortcuts import render
 
+
 # Create your views here.
 
 from .models import Paciente, Medico, Turno
