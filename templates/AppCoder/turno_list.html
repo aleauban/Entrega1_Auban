@@ -10,16 +10,16 @@
             <p>Especialidad: {{turno.especialidad}}</p>
         
             <p>
-                <a href="{% url 'Detail' turno.id %}">Detalles</a>
-                <a href="{% url 'Edit' turno.id %}">Editar</a>
-                <a href="{% url 'Delete' turno.id %}">Eliminar</a>
+                <a href="{% url 'Turno/Detail' turno.id %}">Detalles</a>
+                <a href="{% url 'Turno/Edit' turno.id %}">Editar</a>
+                <a href="{% url 'Turno/Delete' turno.id %}">Eliminar</a>
             </p>
         </li>
         {% endfor %}
 
     </ul>
     <p>
-        <a href="{% url 'New' %}">Crear</a>
+        <a href="{% url 'Turno/New' %}">Crear</a>
     </p>
 
 {% endblock ContenidoQueCambia %}

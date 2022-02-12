@@ -31,10 +31,6 @@ class PacienteDelete(DeleteView):
     model = Paciente
     success_url = "/AppCoder/paciente/list"
 
-class PacienteUpdate(UpdateView):
-    model = Paciente
-    success_url = "/AppCoder/paciente/list"
-    fields = ['nombre', 'apellido', 'email', 'fecha_nacimiento']
 
 class MedicoList(ListView):
     model = Medico
@@ -58,11 +54,6 @@ class MedicoDelete(DeleteView):
     model = Medico
     success_url = "/AppCoder/medico/list"
 
-class MedicoUpdate(UpdateView):
-    model = Medico
-    success_url = "/AppCoder/medico/list"
-    fields = ['nombre', 'apellido', 'email', 'profesion']
-
 class TurnoList(ListView):
     model = Turno
     template_name = "AppCoder/turno_list.html"
@@ -85,7 +76,3 @@ class TurnoDelete(DeleteView):
     model = Turno
     success_url = "/AppCoder/turno/list"
 
-class TurnoUpdate(UpdateView):
-    model = Turno
-    success_url = "/AppCoder/turno/list"
-    fields = ['especialidad', 'fecha']
